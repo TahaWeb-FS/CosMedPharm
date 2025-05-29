@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useCart } from '../context/CartContext'; // adjust path if needed
+import { useCart } from '../../context/CartContext'; // adjust path if needed
 
 
 const products = [

@@ -1,9 +1,9 @@
 import React from 'react';
-import pharmacist from '../assets/pharmacist.jpg';
+import pharmacist from '../../assets/pharmacist.jpg';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen mt-24 md:mt-0 flex items-center overflow-hidden">
       {/* Background Image with Overlay - Adjusted to show right portion */}
       <div className="absolute inset-0 z-0">
         <div className="w-full h-full relative">

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import pharmacist3 from '../assets/pharmacist3.png';
+import pharmacist3 from '../../assets/pharmacist3.png';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { 

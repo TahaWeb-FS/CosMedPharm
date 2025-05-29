@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { useCart } from '../context/CartContext';
-import CartSidebar from './CartSidebar';
+import { useCart } from '../../context/CartContext';
+import CartSidebar from '../CartSidebar';
 import { useAuth0 } from '@auth0/auth0-react';
 import { FaRegUser, FaShoppingBag, FaSearch, FaPrescriptionBottleAlt, FaHome, FaInfoCircle } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
+import Checkout from '../Checkout';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -310,14 +311,5 @@ const Navbar = () => {
     </nav>
   );
 };
-
-// Add this to your CSS or as a style tag
-// @keyframes fadeDown {
-//   from { opacity: 0; transform: translateY(-10px); }
-//   to { opacity: 1; transform: translateY(0); }
-// }
-// .animate-fadeDown {
-//   animation: fadeDown 0.2s ease-out forwards;
-// }
 
 export default Navbar;

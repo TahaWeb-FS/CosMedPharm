@@ -1,15 +1,16 @@
 import './App.css';
-import About from './components/About';
-import Categories from './components/Categories';
-import FeaturedProducts from './components/FeaturedProducts';
-import Footer from './components/Footer';
-import HealthTips from './components/HealthTips';
-import Hero from './components/HeroSection';
-import Navbar from './components/Navbar';
-import Newsletter from './components/NewsLetter';
-import Prescriptions from './components/Prescriptions';
-import Products from './components/Products';
-import Testimonials from './components/Testimonials';
+import About from './components/about/About';
+import Categories from './components/home/Categories';
+import Checkout from './components/Checkout';
+import FeaturedProducts from './components/home/FeaturedProducts';
+import Footer from './components/layouts/Footer';
+import HealthTips from './components/home/HealthTips';
+import Hero from './components/home/HeroSection';
+import Navbar from './components/layouts/Navbar';
+import Newsletter from './components/home/NewsLetter';
+import Prescriptions from './components/prescriptions/Prescriptions';
+import Products from './components/products/Products';
+import Testimonials from './components/home/Testimonials';
 import { Routes, Route } from 'react-router-dom';
 
 // Create a separate component for each page
@@ -30,25 +31,25 @@ function ProductsPage() {
     return (
         <div>
             <h1>Products Page</h1>
-            <FeaturedProducts />
+            <Products />
         </div>
     );
 }
 
-function HealthTipsPage() {
+function PrescriptionsPage() {
     return (
         <div>
             <h1>Health Tips Page</h1>
-            <HealthTips />
+            <Prescriptions />
         </div>
     );
 }
 
-function TestimonialsPage() {
+function AboutPage() {
     return (
         <div>
             <h1>Testimonials Page</h1>
-            <Testimonials />
+            <About />
         </div>
     );
 }
@@ -59,11 +60,10 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/prescriptions" element={<Prescriptions />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/healthtips" element={<HealthTipsPage />} />
-        <Route path="/testimonials" element={<TestimonialsPage />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/prescriptions" element={<PrescriptionsPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
       <Footer />
     </>
